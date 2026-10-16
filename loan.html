@@ -1,0 +1,118 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Форма оформления выдачи книги в BookNest">
+    <title>Оформление выдачи книги | BookNest</title>
+</head>
+<body>
+    <header>
+        <p><a href="index.html">BookNest</a></p>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="book.html">О книге</a></li>
+                <li><a href="loan.html" aria-current="page">Оформить выдачу</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="Хлебные крошки">
+            <ol>
+                <li><a href="index.html">Каталог</a></li>
+                <li aria-current="page">Оформление выдачи</li>
+            </ol>
+        </nav>
+
+        <h1>Оформление выдачи книги</h1>
+        <p>Заполните форму, чтобы оформить учебную заявку на получение книги.</p>
+
+        <form action="loan.html" method="get">
+            <fieldset>
+                <legend>Данные читателя</legend>
+
+                <p>
+                    <label for="reader-name">Фамилия и имя</label>
+                    <input type="text" id="reader-name" name="reader_name" required minlength="2" maxlength="100" autocomplete="name">
+                </p>
+
+                <p>
+                    <label for="reader-email">Электронная почта</label>
+                    <input type="email" id="reader-email" name="email" required autocomplete="email">
+                </p>
+
+                <p>
+                    <label for="reader-phone">Номер телефона</label>
+                    <input type="tel" id="reader-phone" name="phone" required pattern="[+]?[0-9() -]{10,20}" title="Введите номер из цифр, пробелов, скобок или знака плюс" autocomplete="tel">
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Книга и срок выдачи</legend>
+
+                <p>
+                    <label for="book-choice">Выберите книгу</label>
+                    <select id="book-choice" name="book" required>
+                        <option value="">Выберите книгу из списка</option>
+                        <option value="dune">Дюна — Фрэнк Герберт</option>
+                        <option value="harry-potter">Гарри Поттер и философский камень</option>
+                        <option value="1984">1984 — Джордж Оруэлл</option>
+                        <option value="little-prince">Маленький принц</option>
+                        <option value="sherlock-holmes">Приключения Шерлока Холмса</option>
+                        <option value="master-margarita">Мастер и Маргарита</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="start-date">Дата получения</label>
+                    <input type="date" id="start-date" name="start_date" min="2026-10-17" required>
+                </p>
+
+                <p>
+                    <label for="loan-days">Срок выдачи в днях</label>
+                    <input type="number" id="loan-days" name="loan_days" min="1" max="30" value="14" required>
+                </p>
+
+                <p>
+                    <label for="notification">Способ уведомления</label>
+                    <select id="notification" name="notification" required>
+                        <option value="">Выберите способ</option>
+                        <option value="email">Электронная почта</option>
+                        <option value="phone">Телефон</option>
+                    </select>
+                </p>
+            </fieldset>
+
+            <fieldset>
+                <legend>Дополнительная информация</legend>
+
+                <p>
+                    <label for="reader-comment">Комментарий</label>
+                    <textarea id="reader-comment" name="comment" rows="4" maxlength="500" placeholder="Дополнительные пожелания"></textarea>
+                </p>
+
+                <p>
+                    <input type="checkbox" id="rules-agreement" name="agreement" value="yes" required>
+                    <label for="rules-agreement">Я согласен с правилами выдачи книг</label>
+                </p>
+            </fieldset>
+
+            <p>
+                <button type="submit">Отправить заявку</button>
+                <button type="reset">Очистить форму</button>
+            </p>
+        </form>
+
+        <aside>
+            <h2>Перед отправкой</h2>
+            <p>Проверьте контактные данные и выбранную книгу. Эта форма является демонстрационной и не отправляет заявку на сервер.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>BookNest — учебный проект семантической разметки.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Информация о книге «Дюна»">
+    <title>Дюна — информация о книге | BookNest</title>
+</head>
+<body>
+    <header>
+        <p><a href="index.html">BookNest</a></p>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="index.html">Каталог</a></li>
+                <li><a href="book.html" aria-current="page">О книге</a></li>
+                <li><a href="loan.html">Оформить выдачу</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <nav aria-label="Хлебные крошки">
+            <ol>
+                <li><a href="index.html">Каталог</a></li>
+                <li aria-current="page">Дюна</li>
+            </ol>
+        </nav>
+
+        <article itemscope itemtype="https://schema.org/Book">
+            <h1 itemprop="name">Дюна</h1>
+
+            <figure>
+                <img src="images/dune.jpg" alt="Обложка научно-фантастического романа «Дюна»" width="300" height="400" itemprop="image">
+                <figcaption>Роман Фрэнка Герберта</figcaption>
+            </figure>
+
+            <p>Автор: <span itemprop="author">Фрэнк Герберт</span></p>
+
+            <section aria-labelledby="characteristics-title">
+                <h2 id="characteristics-title">Характеристики книги</h2>
+                <dl>
+                    <dt>Жанр</dt>
+                    <dd itemprop="genre">Научная фантастика</dd>
+
+                    <dt>Год издания</dt>
+                    <dd><time datetime="1965" itemprop="datePublished">1965</time></dd>
+
+                    <dt>Язык</dt>
+                    <dd>Русский</dd>
+
+                    <dt>Количество страниц</dt>
+                    <dd>704</dd>
+
+                    <dt>Доступность</dt>
+                    <dd>Доступна для выдачи</dd>
+                </dl>
+            </section>
+
+            <section aria-labelledby="description-title">
+                <h2 id="description-title">Описание</h2>
+                <p itemprop="description">«Дюна» — научно-фантастический роман о планете Арракис, борьбе за ценный ресурс меланж и судьбе Пола Атрейдеса. Книга рассказывает о власти, экологии, ответственности и взрослении героя в сложном мире.</p>
+            </section>
+
+            <p><a href="loan.html">Оформить выдачу книги</a></p>
+        </article>
+
+        <section aria-labelledby="reviews-title">
+            <h2 id="reviews-title">Отзывы читателей</h2>
+
+            <article>
+                <h3>Анна</h3>
+                <p>Интересный мир и необычная история. После чтения хочется узнать продолжение.</p>
+                <p>Оценка: 5 из 5</p>
+                <p><time datetime="2026-09-20">20 сентября 2026 года</time></p>
+            </article>
+
+            <article>
+                <h3>Илья</h3>
+                <p>Книга требует внимания, но хорошо раскрывает устройство мира и мотивы персонажей.</p>
+                <p>Оценка: 4 из 5</p>
+                <p><time datetime="2026-10-01">1 октября 2026 года</time></p>
+            </article>
+        </section>
+
+        <section aria-labelledby="review-form-title">
+            <h2 id="review-form-title">Оставить отзыв</h2>
+            <form action="book.html" method="get">
+                <p>
+                    <label for="review-name">Ваше имя</label>
+                    <input type="text" id="review-name" name="name" required minlength="2" maxlength="60">
+                </p>
+
+                <p>
+                    <label for="review-email">Электронная почта</label>
+                    <input type="email" id="review-email" name="email" required>
+                </p>
+
+                <p>
+                    <label for="review-rating">Оценка</label>
+                    <select id="review-rating" name="rating" required>
+                        <option value="">Выберите оценку</option>
+                        <option value="5">5 — отлично</option>
+                        <option value="4">4 — хорошо</option>
+                        <option value="3">3 — удовлетворительно</option>
+                        <option value="2">2 — плохо</option>
+                        <option value="1">1 — очень плохо</option>
+                    </select>
+                </p>
+
+                <p>
+                    <label for="review-text">Текст отзыва</label>
+                    <textarea id="review-text" name="review" required minlength="10" maxlength="1000" rows="5"></textarea>
+                </p>
+
+                <button type="submit">Отправить отзыв</button>
+                <button type="reset">Очистить форму</button>
+            </form>
+        </section>
+
+        <aside>
+            <h2>Похожие книги</h2>
+            <ul>
+                <li><a href="index.html">1984 — Джордж Оруэлл</a></li>
+                <li><a href="index.html">Мастер и Маргарита — Михаил Булгаков</a></li>
+                <li><a href="index.html">Маленький принц — Антуан де Сент-Экзюпери</a></li>
+            </ul>
+        </aside>
+    </main>
+
+    <footer>
+        <p>BookNest — учебный проект семантической разметки.</p>
+    </footer>
+</body>
+</html>

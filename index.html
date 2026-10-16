@@ -1,0 +1,150 @@
+ 
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Каталог книг BookNest">
+    <title>Каталог книг | BookNest</title>
+</head>
+<body>
+    <header>
+        <p><a href="index.html">BookNest</a></p>
+        <nav aria-label="Основная навигация">
+            <ul>
+                <li><a href="index.html" aria-current="page">Каталог</a></li>
+                <li><a href="book.html">О книге</a></li>
+                <li><a href="loan.html">Оформить выдачу</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <main>
+        <h1>Каталог книг</h1>
+        <p>Найдите книгу для следующего чтения.</p>
+
+        <section aria-labelledby="filter-title">
+            <h2 id="filter-title">Поиск и фильтры</h2>
+            <form action="index.html" method="get">
+                <p>
+                    <label for="search">Название или автор</label>
+                    <input type="search" id="search" name="search" placeholder="Например, Дюна">
+                </p>
+                <p>
+                    <label for="genre">Жанр</label>
+                    <select id="genre" name="genre">
+                        <option value="">Все жанры</option>
+                        <option value="fantasy">Фэнтези</option>
+                        <option value="science-fiction">Научная фантастика</option>
+                        <option value="classic">Классика</option>
+                        <option value="detective">Детектив</option>
+                    </select>
+                </p>
+                <p>
+                    <label for="sort">Сортировка</label>
+                    <select id="sort" name="sort">
+                        <option value="title">По названию</option>
+                        <option value="author">По автору</option>
+                    </select>
+                </p>
+                <p>
+                    <input type="checkbox" id="available" name="available" value="yes">
+                    <label for="available">Только доступные книги</label>
+                </p>
+                <button type="submit">Найти</button>
+                <button type="reset">Сбросить</button>
+            </form>
+        </section>
+
+        <section aria-labelledby="catalog-title">
+            <h2 id="catalog-title">Все книги</h2>
+
+            <article>
+                <figure>
+                    <img src="https://covers.openlibrary.org/b/isbn/9780441172719-M.jpg" alt="Обложка книги «Дюна»" width="180" height="240">
+                    <figcaption>Научная фантастика</figcaption>
+                </figure>
+                <h3>Дюна</h3>
+                <p>Автор: Фрэнк Герберт</p>
+                <p>Год издания: <time datetime="1965">1965</time></p>
+                <p>Доступность: доступна</p>
+                <p><a href="book.html">Подробнее о книге «Дюна»</a></p>
+                <p><a href="loan.html">Оформить выдачу</a></p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="https://covers.openlibrary.org/b/isbn/9780590353427-M.jpg" alt="Обложка книги «Гарри Поттер и философский камень»" width="180" height="240">
+                    <figcaption>Фэнтези</figcaption>
+                </figure>
+                <h3>Гарри Поттер и философский камень</h3>
+                <p>Автор: Джоан Роулинг</p>
+                <p>Год издания: <time datetime="1997">1997</time></p>
+                <p>Доступность: доступна</p>
+                <p><a href="book.html">Подробнее о книге</a></p>
+                <p><a href="loan.html">Оформить выдачу</a></p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="https://covers.openlibrary.org/b/isbn/9780451524935-M.jpg" alt="Обложка книги «1984»" width="180" height="240">
+                    <figcaption>Антиутопия</figcaption>
+                </figure>
+                <h3>1984</h3>
+                <p>Автор: Джордж Оруэлл</p>
+                <p>Год издания: <time datetime="1949">1949</time></p>
+                <p>Доступность: выдана</p>
+                <p><a href="book.html">Подробнее о книге</a></p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="https://covers.openlibrary.org/b/isbn/9780156012195-M.jpg" alt="Обложка книги «Маленький принц»" width="180" height="240">
+                    <figcaption>Философская сказка</figcaption>
+                </figure>
+                <h3>Маленький принц</h3>
+                <p>Автор: Антуан де Сент-Экзюпери</p>
+                <p>Год издания: <time datetime="1943">1943</time></p>
+                <p>Доступность: доступна</p>
+                <p><a href="book.html">Подробнее о книге</a></p>
+                <p><a href="loan.html">Оформить выдачу</a></p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="https://covers.openlibrary.org/b/isbn/9780451528018-M.jpg" alt="Обложка книги «Приключения Шерлока Холмса»" width="180" height="240">
+                    <figcaption>Детектив</figcaption>
+                </figure>
+                <h3>Приключения Шерлока Холмса</h3>
+                <p>Автор: Артур Конан Дойл</p>
+                <p>Год издания: <time datetime="1892">1892</time></p>
+                <p>Доступность: доступна</p>
+                <p><a href="book.html">Подробнее о книге</a></p>
+                <p><a href="loan.html">Оформить выдачу</a></p>
+            </article>
+
+            <article>
+                <figure>
+                    <img src="https://covers.openlibrary.org/b/isbn/9780140817744-M.jpg" alt="Обложка книги «Мастер и Маргарита»" width="180" height="240">
+                    <figcaption>Роман</figcaption>
+                </figure>
+                <h3>Мастер и Маргарита</h3>
+                <p>Автор: Михаил Булгаков</p>
+                <p>Год издания: <time datetime="1967">1967</time></p>
+                <p>Доступность: выдана</p>
+                <p><a href="book.html">Подробнее о книге</a></p>
+            </article>
+        </section>
+
+        <aside>
+            <h2>Совет читателю</h2>
+            <p>Попробуйте выбрать книгу в незнакомом жанре.</p>
+        </aside>
+    </main>
+
+    <footer>
+        <p>BookNest — учебный проект семантической разметки.</p>
+        <p>Дата обновления: <time datetime="2026-10-16">16 октября 2026 года</time></p>
+    </footer>
+</body>
+</html>
